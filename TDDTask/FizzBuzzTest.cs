@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using FizzBuzzApp;
 namespace FizzBuzzApp.Tests
 {
@@ -37,6 +37,15 @@ namespace FizzBuzzApp.Tests
             string result = _fizzBuzz.GetFizzBuzz(input);
 
             Assert.AreEqual("FizzBuzz", result);
+        }
+
+        [Test]
+        public void GetFizzBuzz_InputIsAnotherNumber_ReturnsNumber()
+        {
+            int input = 17;
+            string result = _fizzBuzz.GetFizzBuzz(input);
+
+            Assert.AreEqual("17", result);
         }
     }
 }
